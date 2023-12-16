@@ -20,6 +20,9 @@
 		80F44C522B2DD410006C7BDB /* LandingViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C512B2DD410006C7BDB /* LandingViewBuilder.swift */; };
 		80F44C582B2DD4E1006C7BDB /* NearbyPlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C572B2DD4E1006C7BDB /* NearbyPlacesRepository.swift */; };
 		80F44C5A2B2DD805006C7BDB /* NearByAppNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C592B2DD805006C7BDB /* NearByAppNetworkService.swift */; };
+		80F44C5C2B2DD9E8006C7BDB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */; };
+		80F44C5F2B2DDF06006C7BDB /* NearByPlaceVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */; };
+		80F44C612B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C602B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		80F44C512B2DD410006C7BDB /* LandingViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewBuilder.swift; sourceTree = "<group>"; };
 		80F44C572B2DD4E1006C7BDB /* NearbyPlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyPlacesRepository.swift; sourceTree = "<group>"; };
 		80F44C592B2DD805006C7BDB /* NearByAppNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByAppNetworkService.swift; sourceTree = "<group>"; };
+		80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByPlaceVenue.swift; sourceTree = "<group>"; };
+		80F44C602B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByAppNetworkResponseModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				80F44C592B2DD805006C7BDB /* NearByAppNetworkService.swift */,
+				80F44C602B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		80F44C552B2DD495006C7BDB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -196,11 +204,20 @@
 		80F44C562B2DD4C0006C7BDB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				80F44C5D2B2DDEF0006C7BDB /* Models */,
 				80F44C532B2DD481006C7BDB /* NetworkService */,
 				80F44C542B2DD48A006C7BDB /* DBService */,
 				80F44C572B2DD4E1006C7BDB /* NearbyPlacesRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		80F44C5D2B2DDEF0006C7BDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,10 +354,13 @@
 				80F44C502B2DD401006C7BDB /* LandingViewModel.swift in Sources */,
 				80F44C582B2DD4E1006C7BDB /* NearbyPlacesRepository.swift in Sources */,
 				80F44C132B2DD170006C7BDB /* AppDelegate.swift in Sources */,
+				80F44C5F2B2DDF06006C7BDB /* NearByPlaceVenue.swift in Sources */,
+				80F44C5C2B2DD9E8006C7BDB /* String+Extensions.swift in Sources */,
 				80F44C4E2B2DD3F3006C7BDB /* LandingViewController.swift in Sources */,
 				80F44C5A2B2DD805006C7BDB /* NearByAppNetworkService.swift in Sources */,
 				80F44C522B2DD410006C7BDB /* LandingViewBuilder.swift in Sources */,
 				80F44C4B2B2DD3BF006C7BDB /* NearByFeatureCoordinator.swift in Sources */,
+				80F44C612B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

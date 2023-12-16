@@ -23,11 +23,11 @@ protocol NearByVenue {
 }
 
 protocol NearByPlacesRepositoryProtocol {
-    func getPlaces(forLatitude latitude: Double, forLongitude longitude: Double, pageNo: Int, completion: @escaping NearByPlacesRepositoryCompletion)
+    func getPlaces(forLatitude latitude: Double, forLongitude longitude: Double, pageNo: Int,distance: Int, perPage: Int, filter: String, completion: @escaping NearByPlacesRepositoryCompletion)
 }
 
 class NearbyRepository: NearByPlacesRepositoryProtocol {
-    func getPlaces(forLatitude latitude: Double, forLongitude longitude: Double, pageNo: Int, completion: @escaping NearByPlacesRepositoryCompletion) {
+    func getPlaces(forLatitude latitude: Double, forLongitude longitude: Double, pageNo: Int, distance: Int, perPage: Int, filter: String, completion: @escaping NearByPlacesRepositoryCompletion) {
         
     }
 }
