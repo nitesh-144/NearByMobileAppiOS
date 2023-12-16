@@ -23,6 +23,11 @@
 		80F44C5C2B2DD9E8006C7BDB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */; };
 		80F44C5F2B2DDF06006C7BDB /* NearByPlaceVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */; };
 		80F44C612B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C602B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift */; };
+		80F44C632B2DE294006C7BDB /* NearbyAppDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C622B2DE294006C7BDB /* NearbyAppDBService.swift */; };
+		80F44C6A2B2DECF9006C7BDB /* NearByCoordinatorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C692B2DECF9006C7BDB /* NearByCoordinatorDatasource.swift */; };
+		80F44C6C2B2DED0E006C7BDB /* NearbyCoordinatorDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C6B2B2DED0E006C7BDB /* NearbyCoordinatorDependency.swift */; };
+		80F44C6E2B2DF08F006C7BDB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C6D2B2DF08F006C7BDB /* UIView+Extension.swift */; };
+		80F44C702B2DF0DF006C7BDB /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F44C6F2B2DF0DF006C7BDB /* PlaceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByPlaceVenue.swift; sourceTree = "<group>"; };
 		80F44C602B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByAppNetworkResponseModels.swift; sourceTree = "<group>"; };
+		80F44C622B2DE294006C7BDB /* NearbyAppDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAppDBService.swift; sourceTree = "<group>"; };
+		80F44C692B2DECF9006C7BDB /* NearByCoordinatorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByCoordinatorDatasource.swift; sourceTree = "<group>"; };
+		80F44C6B2B2DED0E006C7BDB /* NearbyCoordinatorDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyCoordinatorDependency.swift; sourceTree = "<group>"; };
+		80F44C6D2B2DF08F006C7BDB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		80F44C6F2B2DF0DF006C7BDB /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,8 @@
 		80F44C482B2DD396006C7BDB /* NearbySearchResults */ = {
 			isa = PBXGroup;
 			children = (
+				80F44C682B2DECE3006C7BDB /* Depencency */,
+				80F44C672B2DECDC006C7BDB /* DataSource */,
 				80F44C4C2B2DD3D0006C7BDB /* Coordinator */,
 				80F44C492B2DD3A0006C7BDB /* Landing */,
 			);
@@ -165,6 +177,7 @@
 				80F44C4D2B2DD3F3006C7BDB /* LandingViewController.swift */,
 				80F44C4F2B2DD401006C7BDB /* LandingViewModel.swift */,
 				80F44C512B2DD410006C7BDB /* LandingViewBuilder.swift */,
+				80F44C6F2B2DF0DF006C7BDB /* PlaceTableViewCell.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -189,6 +202,7 @@
 		80F44C542B2DD48A006C7BDB /* DBService */ = {
 			isa = PBXGroup;
 			children = (
+				80F44C622B2DE294006C7BDB /* NearbyAppDBService.swift */,
 			);
 			path = DBService;
 			sourceTree = "<group>";
@@ -197,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				80F44C5B2B2DD9E8006C7BDB /* String+Extensions.swift */,
+				80F44C6D2B2DF08F006C7BDB /* UIView+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -218,6 +233,22 @@
 				80F44C5E2B2DDF06006C7BDB /* NearByPlaceVenue.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		80F44C672B2DECDC006C7BDB /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				80F44C692B2DECF9006C7BDB /* NearByCoordinatorDatasource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		80F44C682B2DECE3006C7BDB /* Depencency */ = {
+			isa = PBXGroup;
+			children = (
+				80F44C6B2B2DED0E006C7BDB /* NearbyCoordinatorDependency.swift */,
+			);
+			path = Depencency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,15 +381,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F44C632B2DE294006C7BDB /* NearbyAppDBService.swift in Sources */,
 				80F44C1D2B2DD170006C7BDB /* NearBy.xcdatamodeld in Sources */,
 				80F44C502B2DD401006C7BDB /* LandingViewModel.swift in Sources */,
+				80F44C6E2B2DF08F006C7BDB /* UIView+Extension.swift in Sources */,
 				80F44C582B2DD4E1006C7BDB /* NearbyPlacesRepository.swift in Sources */,
 				80F44C132B2DD170006C7BDB /* AppDelegate.swift in Sources */,
 				80F44C5F2B2DDF06006C7BDB /* NearByPlaceVenue.swift in Sources */,
 				80F44C5C2B2DD9E8006C7BDB /* String+Extensions.swift in Sources */,
 				80F44C4E2B2DD3F3006C7BDB /* LandingViewController.swift in Sources */,
+				80F44C6C2B2DED0E006C7BDB /* NearbyCoordinatorDependency.swift in Sources */,
 				80F44C5A2B2DD805006C7BDB /* NearByAppNetworkService.swift in Sources */,
+				80F44C702B2DF0DF006C7BDB /* PlaceTableViewCell.swift in Sources */,
 				80F44C522B2DD410006C7BDB /* LandingViewBuilder.swift in Sources */,
+				80F44C6A2B2DECF9006C7BDB /* NearByCoordinatorDatasource.swift in Sources */,
 				80F44C4B2B2DD3BF006C7BDB /* NearByFeatureCoordinator.swift in Sources */,
 				80F44C612B2DDFBB006C7BDB /* NearByAppNetworkResponseModels.swift in Sources */,
 			);

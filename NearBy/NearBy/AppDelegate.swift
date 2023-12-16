@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow()
-        //window?.rootViewController = SampleViewController()
+        
+        let repository = NearbyRepository()
+        repository.networkService = NearbyAppNetworkService()
+        repository.dbService = NearbyAppDBService()
+        
+        window?.rootViewController = NearbyFeatureCoordinator(withDataSource: NearbyCoordinatorDataSource(backgroundColor: .systemYellow, screenTitle: "NearBy"), withDependency: NearbyCoordinatorDependency(repository: repository)).startFlow()
         window?.makeKeyAndVisible()
         return true
     }

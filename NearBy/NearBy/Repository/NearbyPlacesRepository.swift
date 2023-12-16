@@ -27,7 +27,13 @@ protocol NearByPlacesRepositoryProtocol {
 }
 
 class NearbyRepository: NearByPlacesRepositoryProtocol {
+    
+    var networkService: NearbyAppNetworkService?
+    var dbService: NearbyAppDBService?
+    
     func getPlaces(forLatitude latitude: Double, forLongitude longitude: Double, pageNo: Int, distance: Int, perPage: Int, filter: String, completion: @escaping NearByPlacesRepositoryCompletion) {
-        
+        networkService?.getPlaces(forLatitude: latitude, forLongitude: longitude, pageNo: pageNo){ result in
+            completion(result)
+        }
     }
 }

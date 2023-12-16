@@ -17,8 +17,8 @@ struct NetworkErrorMsg {
 struct NetworkConfig {
     static let clientId = "Mzg0OTc0Njl8MTcwMDgxMTg5NC44MDk2NjY5"
     static let baseURL = "https://api.seatgeek.com/2/venues?"
-    static let defaultPerPageCount = 0
-    static let defaultDistance = 0
+    static let defaultPerPageCount = 10
+    static let defaultDistance = 2
 }
 
 enum NearByAPI {
@@ -27,7 +27,8 @@ enum NearByAPI {
     func makeURLRequest() -> URLRequest?{
         switch self {
             case let .getPlaces(lat,lng,pageNo,distance,perPage,filter) :
-            let urlString = NetworkConfig.baseURL.makeGETUrl(lat: lat, lng: lng, pageNo: pageNo, distance: distance, perPage: perPage, filter: filter)
+            var urlString = NetworkConfig.baseURL.makeGETUrl(lat: lat, lng: lng, pageNo: pageNo, distance: distance, perPage: perPage, filter: filter)
+            urlString += "&client_id=\(NetworkConfig.clientId)"
             guard let url = URL(string: urlString) else { return nil }
             return URLRequest(url: url)
         }
